@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Producto Competencial - Humanidades</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    .section {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background-size: cover;
+      background-position: center;
+      color: white;
+    }
+
+    #inicio {
+      background-image: url('inicio3.jpg');
+      flex-direction: column;
+      color: #fff;
+    }
+
+    #inicio h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.5em;
+      margin-bottom: 30px;
+      text-shadow: 2px 2px 4px #000;
+    }
+
+    .btn-ingresar {
+      padding: 15px 30px;
+      font-size: 1.2em;
+      background-color: #000000b0;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .btn-ingresar:hover {
+      background-color: #ffffffcc;
+      color: black;
+    }
+
+    #materias {
+      background-image: url('materias2.jpg');
+      flex-wrap: wrap;
+      padding: 30px;
+      gap: 10px;
+      flex-direction: column;
+    }
+
+    #materias h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8em;
+      margin-bottom: 40px;
+      color: #fffcfb;
+    }
+
+    .iconos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .materia {
+      width: 140px;
+      height: 140px;
+      background-color: #ffffffd9;
+      color: #3b2d00;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 20px;
+      font-weight: bold;
+      text-align: center;
+      text-decoration: none;
+      transition: transform 0.4s, box-shadow 0.4s;
+      box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .materia:hover {
+      transform: scale(1.08);
+      box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+    }
+
+    .contenido-materia {
+      display: none;
+      height: 100vh;
+      background-color: #fffdf9;
+      color: #333;
+      padding: 40px;
+      text-align: left;
+    }
+
+    .contenido-materia h3 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    .volver {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #a37e5f;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .volver:hover {
+      background-color: #865b3d;
+    }
+  </style>
+</head>
+<body>
+
+  <section id="inicio" class="section">
+    <h1>Producto Competencial Humanidades</h1>
+    <button class="btn-ingresar" onclick="mostrarSeccion('materias')">Ingresa aquí para ver contenido</button>
+  </section>
+
+  <section id="materias" class="section" style="display: none;">
+    <h2>Selecciona una materia</h2>
+    <div class="iconos">
+
+      <a href="#" class="materia" onclick="mostrarContenido('historia')">Historia</a>
+      <a href="#" class="materia" onclick="mostrarContenido('economia')">Economía</a>
+      <a href="#" class="materia" onclick="mostrarContenido('filosofia')">Filosofía</a>
+      <a href="#" class="materia" onclick="mostrarContenido('paz')">Cátedra de Paz</a>
+      <a href="#" class="materia" onclick="mostrarContenido('geografia')">Geografía</a>
+	  <a href="#" class="materia" onclick="mostrarContenido('espanol')">Español</a>
+	  <a href="#" class="materia" onclick="mostrarContenido('ingles')">Ingles</a>
+      <a href="#" class="materia" onclick="mostrarContenido('planlector')">Plan Lector</a>
+      <a href="#" class="materia" onclick="mostrarContenido('religion')">Religión</a>
+    </div>
+  </section>
+     
+
+  <!-- Contenido por materia -->
+  <div id="historia" class="view hidden">
+  <div style="max-width: 900px; margin: 40px auto; background: white; padding: 40px; border-radius: 20px; box-shadow: 0 0 20px rgba(0,0,0,0.1); font-family: 'Segoe UI', sans-serif;">
+    <h2 style="text-align: center; font-size: 28px; margin-bottom: 25px; color: #003366;">El Proceso de Paz en Colombia: ¿Se ha logrado la paz?</h2>
+
+    <p>Desde hace más de 50 años, Colombia ha vivido un conflicto armado que ha afectado a millones de personas. Durante mucho tiempo, las guerrillas, los paramilitares, los narcotraficantes y el mismo Estado han estado en guerra, dejando víctimas, desplazamientos y mucho sufrimiento.</p>
+
+    <p>En 2016, el gobierno colombiano y la guerrilla de las FARC firmaron un Acuerdo de Paz con el objetivo de terminar la violencia. Sin embargo, aunque el acuerdo trajo cambios importantes, todavía hay problemas que hacen que muchos se pregunten si realmente se ha logrado la paz.</p>
+
+    <h3 style="color: #003366;">¿Cómo comenzó el conflicto?</h3>
+    <p>La violencia en Colombia viene desde hace muchas décadas. Uno de los primeros problemas fue la guerra entre los partidos políticos tradicionales: los liberales y los conservadores. Entre 1948 y 1958, esta lucha causó la muerte de más de 200.000 personas, en un período conocido como "La Violencia".</p>
+
+    <p>Para intentar acabar con esta guerra, en 1958 se creó el Frente Nacional, un acuerdo en el que los dos partidos se turnaban en el poder. Sin embargo, este acuerdo dejó por fuera a otros sectores de la sociedad, lo que hizo que surgieran grupos guerrilleros que decían luchar por los derechos de los campesinos.</p>
+
+    <p>Uno de estos grupos fue la guerrilla de las FARC-EP, que nació en 1964. Con el tiempo, las FARC se hicieron más fuertes y empezaron a financiarse con el narcotráfico, secuestros y extorsiones. Para combatirlas, aparecieron los grupos paramilitares, lo que hizo que el conflicto se volviera más grande y violento.</p>
+
+    <h3 style="color: #003366;">¿Cómo se llegó al Acuerdo de Paz?</h3>
+    <p>Durante muchos años, diferentes presidentes intentaron hacer acuerdos de paz con las guerrillas, pero no funcionaron. Uno de los intentos más recordados fue en el Caguán (1999-2002), cuando el gobierno de Andrés Pastrana les dio a las FARC una zona libre de militares para negociar. Sin embargo, las FARC siguieron secuestrando y atacando, y el proceso fracasó.</p>
+
+    <p>En 2012, el presidente Juan Manuel Santos empezó un nuevo proceso de paz en La Habana, Cuba. Después de cuatro años de negociaciones, el 26 de septiembre de 2016 se firmó el acuerdo en Cartagena. Pero cuando se hizo un plebiscito para que la gente votara si estaba de acuerdo o no, el 50,2% de los votantes lo rechazó. Esto obligó a hacerle cambios antes de aprobarlo en noviembre de 2016.</p>
+
+    <h3 style="color: #003366;">¿Qué ha pasado después del Acuerdo de Paz?</h3>
+
+    <h4 style="margin-top: 20px; color: #006600;">Cosas que han mejorado</h4>
+    <ul>
+      <li>Desmovilización de las FARC: Más de 13.000 exguerrilleros dejaron las armas y se reincorporaron a la sociedad.</li>
+      <li>Creación de la JEP: Un sistema de justicia para juzgar crímenes cometidos durante la guerra.</li>
+      <li>Más participación política: Se creó el partido político Comunes, formado por excombatientes.</li>
+      <li>Atención a víctimas: Se han dado indemnizaciones y se han hecho actos de perdón.</li>
+    </ul>
+
+    <h4 style="margin-top: 20px; color: #990000;">Problemas y desafíos</h4>
+    <ul>
+      <li>Aumento de la violencia en algunas zonas: Aunque las FARC se desmovilizaron, algunos grupos disidentes siguen delinquiendo.</li>
+      <li>Asesinato de líderes sociales: Desde 2016, más de 1.400 líderes sociales han sido asesinados.</li>
+      <li>Cumplimiento lento del acuerdo: Muchas promesas, como la reforma agraria, no se han cumplido completamente.</li>
+    </ul>
+
+    <h3 style="color: #003366;">Reflexión: ¿Realmente estamos en paz?</h3>
+    <p>El Acuerdo de Paz fue un paso importante para reducir la violencia en Colombia, pero no ha sido suficiente para garantizar una paz total. La guerra no terminó por completo, sino que cambió de forma.</p>
+
+    <p>Uno de los problemas más graves es la falta de apoyo a las regiones más afectadas por el conflicto. Si el gobierno no cumple con las promesas del acuerdo, los grupos ilegales seguirán creciendo.</p>
+
+    <p>También es importante que la gente entienda que la paz no se logra solo con la firma de un papel. Se necesita que todos participemos, denunciemos las injusticias y apoyemos la reconciliación.</p>
+
+    <h3 style="color: #003366;">Recursos Interactivos sobre el Proceso de Paz en Colombia</h3>
+    <ul>
+      <li><a href="https://bibliotecadelproceso.bapp.gov.co/" target="_blank">Biblioteca Abierta del Proceso de Paz (BAPP)</a></li>
+      <li><a href="https://bibliotecadelproceso.bapp.gov.co/juegos" target="_blank">Juegos Interactivos de la BAPP</a></li>
+      <li><a href="https://www.jep.gov.co/Documents/Cartilla%20ABC%20del%20Acuerdo%20Final.pdf" target="_blank">Cartilla ABC del Acuerdo Final</a></li>
+    </ul>
+
+    <h3 style="color: #003366;">Video Explicativo</h3>
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin-bottom: 30px;">
+      <iframe src="https://www.youtube.com/embed/YKmVbr3fRg0" title="Video Proceso de Paz" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 10px;"></iframe>
+    </div>
+
+    <div style="text-align: center;">
+      <button onclick="goToView('seleccion')" style="padding: 10px 25px; background-color: #003366; color: white; border: none; border-radius: 8px; font-size: 16px; cursor: pointer;">Volver a Selección de Materias</button>
+    </div>
+  </div>
+</div>
+
+
+ <!-- Vista 4 - Economía -->
+<div id="vista4" class="view hidden">
+  <div class="card">
+    <h2>ECONOMÍA</h2>
+
+    <p><strong>¿Cómo ha influido la globalización en Colombia?</strong></p>
+    <p>La globalización ha cambiado muchas cosas en Colombia, tanto de manera positiva como negativa. En la economía, ha permitido que el país tenga más comercio con el mundo y reciba inversiones extranjeras, lo que ha impulsado sectores como el petróleo, la minería y la agricultura. Sin embargo, también ha hecho que Colombia dependa de mercados externos, lo que significa que si hay una crisis global, el país también se ve afectado. Además, aunque han llegado muchas empresas internacionales, las pequeñas y medianas empresas colombianas tienen más dificultades para competir.</p>
+
+    <p><strong>Cambios culturales:</strong></p>
+    <p>La música, el cine y la moda de otros países han cambiado los gustos de muchas personas. Aunque esto ha traído diversidad, también ha hecho que algunas tradiciones colombianas se pierdan poco a poco. La comida rápida y las marcas internacionales son cada vez más populares, lo que afecta a los productos locales.</p>
+
+    <p><strong>Impacto tecnológico:</strong></p>
+    <p>La tecnología ha permitido que más personas accedan a internet, educación en línea y teletrabajo. Pero en las zonas rurales aún hay muchas dificultades para acceder a tecnología avanzada. Además, la automatización y la inteligencia artificial están cambiando los empleos, y muchas personas tendrán que adaptarse a nuevas formas de trabajo.</p>
+
+    <p><strong>Transformaciones sociales:</strong></p>
+    <p>La migración interna y externa ha hecho que las ciudades sean más diversas, pero también ha generado problemas de empleo e infraestructura. La desigualdad social ha crecido porque no todos tienen las mismas oportunidades frente a la globalización.</p>
+
+    <p><strong>Impacto ambiental:</strong></p>
+    <p>La explotación de recursos naturales ha aumentado la deforestación y la contaminación, especialmente por la minería y la ganadería. Aun así, también ha crecido la conciencia ambiental y se han impulsado algunas regulaciones para reducir el daño ecológico.</p>
+
+    <p><strong>Conclusión:</strong></p>
+    <p>La globalización ha traído oportunidades para Colombia, como el desarrollo económico y el acceso a nuevas tecnologías. Sin embargo, también ha generado desafíos como la desigualdad social y el daño ambiental. Es necesario encontrar un equilibrio entre el crecimiento y la protección de la cultura y el medioambiente.</p>
+
+    <p><strong>Infografía interactiva:</strong></p>
+    <p>
+      Puedes ver una infografía interactiva sobre este tema en el siguiente enlace:
+      <br>
+      <a href="https://www.canva.com/design/DAGhKJ1O-8Q/uQvHXupk1tWtkoAtVzaTlA/edit" target="_blank">Ver infografía en Canva</a>
+    </p>
+
+    <br>
+    <button onclick="showView('materias')">Volver a materias</button>
+  </div>
+</div>
+
+    <h3>Filosofia</h3>
+    <p>Aquí va el contenido de Economía.</p>
+    <a class="volver" href="#" onclick="volverAMaterias()">Volver a materias</a>
+  </section
+  <section id="economia" class="contenido-materia">
+    <h3>Economía</h3>
+    <p>Aquí va el contenido de Economía.</p>
+    <a class="volver" href="#" onclick="volverAMaterias()">Volver a materias</a>
+  </section
+
+<section id="economia" class="contenido-materia">
+    <h3>Economía</h3>
+    <p>Aquí va el contenido de Economía.</p>
+    <a class="volver" href="#" onclick="volverAMaterias()">Volver a materias</a>
+  </section
+  <section id="economia" class="contenido-materia">
+    <h3>Economía</h3>
+    <p>Aquí va el contenido de Economía.</p>
+    <a class="volver" href="#" onclick="volverAMaterias()">Volver a materias</a>
+  </section
+  <!-- Puedes copiar el bloque de contenido y pegar más secciones como Filosofía, Paz, Español, etc -->
+
+  <script>
+  
+  
+    function mostrarSeccion(id) {
+      document.getElementById('inicio').style.display = 'none';
+      document.getElementById('materias').style.display = 'flex';
+    }
+
+    function mostrarContenido(id) {
+      document.getElementById('materias').style.display = 'none';
+      document.querySelectorAll('.contenido-materia').forEach(sec => sec.style.display = 'none');
+      document.getElementById(id).style.display = 'block';
+    }
+
+    function volverAMaterias() {
+      document.querySelectorAll('.contenido-materia').forEach(sec => sec.style.display = 'none');
+      document.getElementById('materias').style.display = 'flex';
+    }
+	
+  </script>
+
+</body>
+</html>

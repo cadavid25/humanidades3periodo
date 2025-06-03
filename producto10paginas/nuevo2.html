@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Productos Competenciales - Humanidades</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body, html {
+      width: 100%;
+      height: 100%;
+    }
+
+    .vista {
+      display: none;
+      width: 100vw;
+      height: 100vh;
+      background-size: cover;
+      background-position: center;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+    }
+
+    .activa {
+      display: flex;
+      flex-direction: column;
+    }
+
+    h1 {
+      font-size: 3em;
+      color: white;
+      text-shadow: 2px 2px 4px black;
+      margin-bottom: 40px;
+    }
+
+    .boton {
+      padding: 16px 36px;
+      font-size: 1.2em;
+      border: none;
+      border-radius: 10px;
+      background-color: rgba(153, 102, 51, 0.6); /* cafecito translúcido */
+      color: white;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .boton:hover {
+      transform: scale(1.05);
+    }
+
+    .grid-materias {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .materia {
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 40px;
+      border-radius: 16px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 1.3em;
+      font-weight: bold;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .materia:hover {
+      transform: scale(1.05);
+      background-color: rgba(255, 255, 255, 0.9);
+    }
+
+    .contenido-materia {
+      background-color: white;
+      padding: 30px;
+      max-width: 900px;
+      height: 80vh;
+      overflow-y: auto;
+      border-radius: 16px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      text-align: justify;
+    }
+
+    .boton-volver {
+      margin-top: 20px;
+      padding: 12px 24px;
+      background-color: rgba(0, 0, 0, 0.6);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Vista 1: Bienvenida -->
+  <div class="vista activa" id="inicio" style="background-image: url('inicio3.jpg');">
+    <h1>Productos Competenciales - Humanidades</h1>
+    <button class="boton" onclick="mostrarVista('seleccion')">Ingresar</button>
+  </div>
+
+  <!-- Vista 2: Selección de materias -->
+  <div class="vista" id="seleccion" style="background-image: url('materias2.jpg');">
+    <div class="grid-materias">
+      <div class="materia" onclick="mostrarVista('historia')">Historia</div>
+      <div class="materia" onclick="mostrarVista('filosofia')">Filosofía</div>
+      <div class="materia" onclick="mostrarVista('catedra')">Cátedra</div>
+      <div class="materia" onclick="mostrarVista('economia')">Economía</div>
+      <div class="materia" onclick="mostrarVista('geografia')">Geografía</div>
+      <div class="materia" onclick="mostrarVista('espanol')">Español</div>
+      <div class="materia" onclick="mostrarVista('ingles')">Inglés</div>
+      <div class="materia" onclick="mostrarVista('planlector')">Plan Lector</div>
+      <div class="materia" onclick="mostrarVista('religion')">Religión</div>
+    </div>
+  </div>
+
+  <!-- Vista 3: Cada materia -->
+  <div class="vista" id="historia" style="background-image: url('materias.jpg');">
+    <div class="contenido-materia">
+      <!-- Aquí vas a pegar tu contenido completo de Historia -->
+	  <h2>Historia de Colombia</h2>
+        <h3>El Proceso de Paz en Colombia: ¿Se ha logrado la paz?</h3>
+        <p>Desde hace más de 50 años, Colombia ha vivido un conflicto armado que ha afectado a millones de personas.
+		Durante mucho tiempo, las guerrillas, los paramilitares, los narcotraficantes y el mismo Estado han estado en
+		guerra, dejando víctimas, desplazamientos y mucho sufrimiento.</p>
+
+        <p>En 2016, el gobierno colombiano y la guerrilla de las FARC firmaron un Acuerdo de Paz con el objetivo de
+		terminar la violencia. Sin embargo, aunque el acuerdo trajo cambios importantes, todavía hay problemas que
+		hacen que muchos se pregunten si realmente se ha logrado la paz.</p>
+
+        <h3>¿Cómo comenzó el conflicto?</h3>
+        <p>La violencia en Colombia viene desde hace muchas décadas. Uno de los primeros problemas fue la guerra entre
+		los partidos políticos tradicionales: los liberales y los conservadores. Entre 1948 y 1958, esta lucha causó la
+		muerte de más de 200.000 personas, en un período conocido como "La Violencia".</p>
+
+        <p>Para intentar acabar con esta guerra, en 1958 se creó el Frente Nacional, un acuerdo en el que los dos partidos
+		se turnaban en el poder. Sin embargo, este acuerdo dejó por fuera a otros sectores de la sociedad, lo que hizo que 
+		surgieran grupos guerrilleros que decían luchar por los derechos de los campesinos.</p>
+
+        <p>Uno de estos grupos fue la guerrilla de las FARC-EP, que nació en 1964. Con el tiempo, las FARC se hicieron más
+		fuertes y empezaron a financiarse con el narcotráfico, secuestros y extorsiones. Para combatirlas, aparecieron los 
+		grupos paramilitares, lo que hizo que el conflicto se volviera más grande y violento.</p>
+
+        <h3>¿Cómo se llegó al Acuerdo de Paz?</h3>
+        <p>Durante muchos años, diferentes presidentes intentaron hacer acuerdos de paz con las guerrillas, pero no funcionaron.
+		Uno de los intentos más recordados fue en el Caguán (1999-2002), cuando el gobierno de Andrés Pastrana les dio a las FARC 
+		una zona libre de militares para negociar. Sin embargo, las FARC siguieron secuestrando y atacando, y el proceso fracasó.</p>
+
+        <p>En 2012, el presidente Juan Manuel Santos empezó un nuevo proceso de paz en La Habana, Cuba. Después de cuatro años de
+		negociaciones, el 26 de septiembre de 2016 se firmó el acuerdo en Cartagena. Pero cuando se hizo un plebiscito para que la 
+		gente votara si estaba de acuerdo o no, el 50,2% de los votantes lo rechazó. Esto obligó a hacerle cambios antes de aprobarlo
+		en noviembre de 2016.</p>
+
+        <h3>¿Qué ha pasado después del Acuerdo de Paz?</h3>
+        <h4>Cosas que han mejorado</h4>
+        <ul>
+            <li>Desmovilización de las FARC: Más de 13.000 exguerrilleros dejaron las armas y se reincorporaron a la sociedad.</li>
+            <li>Creación de la JEP: Un sistema de justicia para juzgar crímenes cometidos durante la guerra.</li>
+            <li>Más participación política: Se creó el partido político Comunes, formado por excombatientes.</li>
+            <li>Atención a víctimas: Se han dado indemnizaciones y se han hecho actos de perdón.</li>
+        </ul>
+
+        <h4>Problemas y desafíos</h4>
+        <ul>
+            <li>Aumento de la violencia en algunas zonas: Aunque las FARC se desmovilizaron, algunos grupos disidentes siguen delinquiendo.</li>
+            <li>Asesinato de líderes sociales: Desde 2016, más de 1.400 líderes sociales han sido asesinados.</li>
+            <li>Cumplimiento lento del acuerdo: Muchas promesas, como la reforma agraria, no se han cumplido completamente.</li>
+        </ul>
+
+        <h3>Reflexión: ¿Realmente estamos en paz?</h3>
+        <p>El Acuerdo de Paz fue un paso importante para reducir la violencia en Colombia, pero no ha sido suficiente para garantizar 
+		una paz total. La guerra no terminó por completo, sino que cambió de forma.</p>
+
+        <p>Uno de los problemas más graves es la falta de apoyo a las regiones más afectadas por el conflicto. Si el gobierno no cumple
+		con las promesas del acuerdo, los grupos ilegales seguirán creciendo.</p>
+
+        <p>También es importante que la gente entienda que la paz no se logra solo con la firma de un papel. Se necesita que todos participemos,
+		denunciemos las injusticias y apoyemos la reconciliación.</p>
+
+
+    <h4>Recursos Interactivos sobre el Proceso de Paz en Colombia</h4>
+    
+   <ul>
+    <li><a href="https://bapp.com.co/" target="_blank">Biblioteca Abierta del Proceso de Paz (BAPP)</a> - Plataforma con líneas de tiempo, mapas interactivos y documentos clave sobre el acuerdo.</li>
+    <li><a href="https://bapp.com.co/recursos/juegos/" target="_blank">Juegos Interactivos de la BAPP</a> - Quizzes, mapas interactivos y rompecabezas para aprender sobre el proceso de paz.</li>
+    <li><a href="https://www.cancilleria.gov.co/sites/default/files/cartillaabcdelacuerdofinal2.pdf" target="_blank">Cartilla ABC del Acuerdo Final</a> - Documento con una explicación accesible de los puntos principales del acuerdo.</li>
+</ul>
+
+    <h3>Video Explicativo</h3>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/YKmVbr3fRg0" 
+        title="El Acuerdo de Paz en caricaturas" frameborder="0" 
+        allowfullscreen></iframe>
+    </div>
+    <button class="boton-volver" onclick="mostrarVista('seleccion')">Volver</button>
+  </div>
+
+  <div class="vista" id="filosofia" style="background-image: url('materias.jpg');">
+    <div class="contenido-materia">
+	<h2>La ética política en Colombia: desafíos y reflexiones</h2>
+        <p>La ética política es la base sobre la cual se construye una democracia justa y
+        equitativa. Se refiere a los principios morales que deben guiar la toma de decisiones
+        en la gestión pública y la representación ciudadana. En Colombia, este tema ha sido
+        crucial en los últimos años, especialmente en el contexto de los Acuerdos de Paz y
+        la persistente desigualdad económica.</p>
+		 <p>Los Acuerdos de Paz firmados en 2016 con las FARC representaron un punto de
+         inflexión en la historia del país. Más allá de su contenido, el proceso puso a prueba
+         la ética de los actores políticos. ¿Debe la paz estar por encima de cualquier interés
+         partidista? ¿Es legítimo desconocer o modificar un acuerdo negociado con apoyo
+         internacional? La polarización en torno a estos interrogantes dejó en evidencia la
+         fragilidad ética de la política colombiana, donde muchas decisiones parecían estar
+         motivadas más por cálculos electorales que por un compromiso genuino con la
+         reconciliación.</p>
+         <p>Por otro lado, la desigualdad económica sigue siendo una de las mayores deudas
+         del Estado con la sociedad. A pesar del crecimiento económico, la brecha entre ricos
+         y pobres se mantiene, afectando especialmente a las comunidades rurales y a los
+         sectores históricamente marginados. La ética política exige preguntarse: ¿los
+         líderes están realmente comprometidos con la justicia social o simplemente
+         administran la desigualdad sin transformarla? ¿Es ético que en un país con tanta
+         riqueza natural y cultural existan niveles tan altos de pobreza?</p>
+		  <p>La corrupción es otro de los grandes desafíos éticos en la política colombiana.
+         Casos de desfalcos, clientelismo y compra de votos han debilitado la confianza en
+         las instituciones. La pregunta que surge es: ¿cómo puede la ciudadanía exigir mayor
+         ética en la política si muchas veces premia con el voto a quienes han incurrido en
+         prácticas cuestionables?</p>
+		 <p>En última instancia, la ética política no es solo un tema de gobernantes, sino también
+         de ciudadanos. La sociedad colombiana debe preguntarse: ¿estamos dispuestos a
+         elegir líderes que prioricen el bien común sobre sus intereses personales? ¿Qué
+         acciones concretas podemos tomar para exigir mayor transparencia y
+         responsabilidad?</p>
+		 <p>El futuro de Colombia depende de la capacidad de su política para alinearse con
+         principios éticos sólidos. Más allá de ideologías y partidos, el reto es construir un
+         país donde la justicia, la equidad y la paz sean más que discursos y se conviertan
+         en realidades tangibles.</p>  
+		 
+	<div style="margin-top: 30px; padding-top: 20px;">
+    <h3>¡Participa y comparte tu opinión!</h3>
+    <p>Deja tu comentario a continuación:</p>
+    
+    <form id="comentarioForm">
+        <label for="nombre">Tu nombre:</label><br>
+        <input type="text" id="nombre" placeholder="Escribe tu nombre" required><br><br>
+
+        <label for="comentario">Comentario:</label><br>
+        <textarea id="comentario" placeholder="Escribe tu comentario..." required></textarea><br><br>
+
+        <button type="submit">Enviar comentario</button>
+    </form>
+
+    <div id="comentariosRecibidos" style="margin-top: 30px;">
+        <h4>Comentarios:</h4>
+        <ul id="listaComentarios"></ul>
+    </div>
+</div>
+
+<script>
+    document.getElementById("comentarioForm").addEventListener("submit", function(event){
+        event.preventDefault();
+
+        let nombre = document.getElementById("nombre").value;
+        let comentario = document.getElementById("comentario").value;
+
+        let nuevoComentario = document.createElement("li");
+        nuevoComentario.textContent = `${nombre}: ${comentario}`;
+
+        document.getElementById("listaComentarios").appendChild(nuevoComentario);
+
+        document.getElementById("comentarioForm").reset();
+    });
+</script>
+	</div>
+    <button class="boton-volver" onclick="mostrarVista('seleccion')">Volver</button>
+  </div>
+
+  <div class="vista" id="catedra" style="background-image: url('materias.jpg');">
+    <div class="contenido-materia">
+	<p>
+       
+        El proceso de paz en Colombia entre 2012 y 2016 representó un esfuerzo significativo por
+        parte del gobierno y las Fuerzas Armadas Revolucionarias de Colombia (FARC) para
+        poner fin a décadas de conflicto armado. Sin embargo, la reconciliación y la justicia social
+        emergieron como desafíos centrales en este camino hacia la paz.
+    </p>
+
+    <p>
+        <strong>DESAFÍOS EN LA RECONCILIACIÓN</strong>  
+       <br> 		
+        La reconciliación ha sido un proceso bastante complejo debido al gran dolor de las
+        víctimas, la violencia y el conflicto armado son huellas imborrables y heridas profundas
+        que marcaron en la sociedad. Muchas personas sienten que el proceso de paz no ha
+        hecho justicia a su sufrimiento. Un campesino desplazado expresó en una entrevista:  
+        <em>"Nos piden que perdonemos, pero ¿cómo se perdona cuando te lo han quitado todo? Mi
+        familia no tiene tierra, no tiene casa, y los que hicieron daño están libres."</em>  
+        (Centro Nacional de Memoria Histórica, 2018).  
+        La resistencia al perdón por parte de las víctimas es un obstáculo clave para la reconciliación.
+		<img src="paz.jpg" alt="Paz en Colombia" width="350" align="left" hspace="10">
+        Además, aunque en el acuerdo se creó la jurisdicción especial para la paz, un mecanismo de justicia transicional por
+        medio del cual se investiga y juzga a los integrantes de las FARC, miembros de la Fuerza
+        Pública y terceros que hayan participado en el Conflicto armado interno de Colombia,
+        muchos excombatientes se niegan a reconocer la totalidad de sus crímenes, generando
+        desconfianza entre las comunidades víctimas que esperan una total y completa justicia.
+    </p>
+
+    <p>
+        Otro obstáculo para la reconciliación es la estigmatización de los excombatientes. Aunque
+        miles de desmovilizados han intentado reintegrarse a la sociedad, muchos enfrentan
+        discriminación y dificultades para encontrar empleo. En una entrevista, un exguerrillero
+        explicó:  
+        <em>"Salimos de la guerra para vivir en paz, pero nos tratan como si nunca hubiéramos
+        cambiado. Queremos trabajar, pero nadie nos da la oportunidad."</em> (El Espectador, 2019).
+    </p>
+
+    <p>
+        <strong>DESAFÍOS EN LA JUSTICIA SOCIAL</strong>
+       <br>	
+        Uno de los pilares del Acuerdo de Paz fue la reforma rural integral, que buscaba devolver
+        tierras a campesinos desplazados y reducir la desigualdad en el campo. Sin embargo, la
+        implementación ha sido lenta y, en muchos casos, inexistente. Un líder comunitario de
+        Catatumbo expresó en una entrevista:  
+        <em>"Nos prometieron que la paz traería desarrollo, pero seguimos sin luz, sin agua potable y sin oportunidades."</em>  
+        (El País, 2021).
+    </p>
+
+    <p>
+        Además, la violencia no desaparece. Desde la firma del acuerdo en 2016, más de
+        1.300 líderes sociales y defensores de los derechos humanos que apoyaban a las
+        víctimas desplazadas por el conflicto han sido asesinados en los últimos años. Muchos de
+        ellos por defender los derechos de sus comunidades o por reclamar tierras que antes
+        estaban en manos de grupos armados o narcotraficantes.
+    </p>
+
+    <p>
+        La fiscal general de Colombia, Luz Adriana Camargo, declaró:  
+        <em>"Colombia sigue siendo el país más peligroso del mundo para defender los derechos humanos."</em>  
+        (El País, 2024).
+    </p>
+
+    <p>
+        Además, la justicia social se ha visto afectada por la corrupción, ya que fondos que iban
+        para el desarrollo de zonas afectadas por el conflicto han sido desviados por funcionarios
+        corruptos, dejando a personas sin acceso a la salud, a la educación y al empleo.
+    </p>
+
+    <p>  
+        Tenemos un proceso de paz incompleto. Sin verdad, sin apoyo real a las
+        víctimas y sin inversión en las comunidades más afectadas, la paz sigue siendo frágil.
+        Para que la paz en Colombia sea sostenible, es necesario garantizar la seguridad de
+        líderes sociales, combatir la corrupción y cumplir con los compromisos adquiridos en el
+        acuerdo.
+    </p>
+
+    <div>
+       <iframe width="560" height="315" src="https://www.youtube.com/embed/RIoLADtXLpw" frameborder="0" allowfullscreen></iframe> 
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/dHjvAH9lSMc" frameborder="0" allowfullscreen></iframe>
+	</div>
+    <button class="boton-volver" onclick="mostrarVista('seleccion')">Volver</button>
+  </div>
+
+ <div class="contenido-materia vista" id="economia">
+  <div class="recuadro-blanco">
+    <!-- AQUI VA TU CONTENIDO DE ECONOMIA -->
+  </div>
+  <button class="volver" onclick="mostrarVista('materias')">Volver</button>
+</div>
+
+
+  <div class="vista" id="geografia" style="background-image: url('materias.jpg');">
+    <div class="contenido-materia"></div>
+    <button class="boton-volver" onclick="mostrarVista('seleccion')">Volver</button>
+  </div>
+
+  <div class="vista" id="espanol" style="background-image: url('materias.jpg');">
+    <div class="contenido-materia"></div>
+    <button class="boton-volver" onclick="mostrarVista('seleccion')">Volver</button>
+  </div>
+
+  <div class="vista" id="ingles" style="background-image: url('materias.jpg');">
+    <div class="contenido-materia"></div>
+    <button class="boton-volver" onclick="mostrarVista('seleccion')">Volver</button>
+  </div>
+
+  <div class="vista" id="planlector" style="background-image: url('materias.jpg');">
+    <div class="contenido-materia"></div>
+    <button class="boton-volver" onclick="mostrarVista('seleccion')">Volver</button>
+  </div>
+
+  <div class="vista" id="religion" style="background-image: url('materias.jpg');">
+    <div class="contenido-materia"></div>
+    <button class="boton-volver" onclick="mostrarVista('seleccion')">Volver</button>
+  </div>
+
+  <script>
+    function mostrarVista(id) {
+      const vistas = document.querySelectorAll('.vista');
+      vistas.forEach(v => v.classList.remove('activa'));
+      document.getElementById(id).classList.add('activa');
+    }
+  </script>
+
+</body>
+</html>
